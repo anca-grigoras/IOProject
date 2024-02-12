@@ -1,6 +1,7 @@
 package com.io.project.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -10,7 +11,8 @@ import lombok.Setter;
 @Entity
 @Getter @Setter @NoArgsConstructor
 public class TedTalkModel {
-    private @Id @Setter(AccessLevel.PROTECTED) Long id;
+    private @Id @GeneratedValue
+    @Setter(AccessLevel.PROTECTED) Long id;
 
     private String title;
     private String author;

@@ -11,6 +11,7 @@ public class TedTalkService {
 
     private TedTalkRepository repository;
     public TedTalkService(TedTalkRepository repository) {
+
         this.repository = repository;
     }
 
@@ -26,7 +27,7 @@ public class TedTalkService {
         repository.deleteById(id);
     }
 
-    public List<TedTalkModel> findAll(String author, String title, long views, long likes) {
-        return repository.findByAuthorAndTitleAndViewsAndLikes(author, title, views, likes);
+    public Iterable<TedTalkModel> findAll() {
+        return repository.findAll();
     }
 }
